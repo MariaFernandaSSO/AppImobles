@@ -1,11 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-button *ngFor="let tela of telas">{{tela.text}}</ion-button>
+  <ion-button
+    expand="full"
+    *ngFor="let tela of telas"
+    color="warning"
+    [routerLink]="tela.path"
+    >{{tela.text}}</ion-button
+  >
 </ion-content>

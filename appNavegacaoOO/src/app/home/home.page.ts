@@ -22,7 +22,7 @@ export class HomePage {
     },
     {
       path: "/cad-locador",
-      text: "/Cadastrar Locador"
+      text: "Cadastrar Locador"
     },
   ];
 
