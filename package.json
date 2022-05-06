@@ -1,0 +1,22 @@
+{
+  "name": "3e_gb_pamii_0429",
+  "version": "1.0.0",
+  "description": "Desenvolvimento de um projeto Ionic onde foram aplicados conceitos de Programação Orientada a Objetos. Criação de múltiplas telas e navegação entre telas e criação de projetos personalizados.",
+  "main": "index.js",
+  "scripts": {
+    "ionici":"npm i -g @ionic/cli",
+    "gitconfig": "git config --local user.name 'Maria Fernanda Oliveira' ; git config --local user.email 'mariafernandasso281@gmail.com'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/mariafernandasso281/3e_gb_pamii_0429.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/mariafernandasso281/3e_gb_pamii_0429/issues"
+  },
+  "homepage": "https://gitlab.com/mariafernandasso281/3e_gb_pamii_0429#readme"
+}
