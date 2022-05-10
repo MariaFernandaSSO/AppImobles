@@ -7,6 +7,25 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  telas =[
+    {
+      path: "/cad-imovel",
+      text: "Cadastrar Imóvel"
+    },
+    {
+      path: "/cad-imobiliaria",
+      text: "Cadastrar Imobiliária"
+    },
+    {
+      path: "/cad-proprietario",
+      text: "Cadastrar Proprietário"
+    },
+    {
+      path: "/cad-locador",
+      text: "Cadastrar Locador"
+    },
+  ];
+
   constructor() {}
 
 }
