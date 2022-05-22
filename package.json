@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "ionici":"npm i -g @ionic/cli",
-    "gitconfig": "git config --local user.name 'Maria Fernanda Oliveira' ; git config --local user.email 'mariafernandasso281@gmail.com'",
+    "gitconfig1": "git config --local user.name 'Maria Fernanda Oliveira' ; git config --local user.email 'mariafernandasso281@gmail.com'",
+    "gitconfig2": "git config --local user.name 'Estevan Hernandes Silva de Oliveira'; git config --local user.email 'estevanhernandes1@gmail.com'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
