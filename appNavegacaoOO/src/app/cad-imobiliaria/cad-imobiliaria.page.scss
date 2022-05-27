@@ -1,0 +1,28 @@
+*  {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.formulario {
+  margin: 1rem 0.8rem;
+}
+
+h3 {
+  font-weight: 700;
+  text-align: center;
+ }
+
+ion-item{
+  border-radius: 10px;
+  border: 1px solid #DCDCDC;
+  margin-block: 1rem;
+}
+
+ion-item > ion-label {
+  font-family: 'DM Sans', sans-serif;
+}
+
+ion-button{
+  margin: 0px auto;
+  margin-block: 1.2rem 0rem;
+  font-weight: 700;
+}
