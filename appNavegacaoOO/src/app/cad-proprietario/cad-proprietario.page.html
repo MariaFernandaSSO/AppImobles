@@ -3,10 +3,42 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>CadProprietario</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-text color="dark">
+    <h1>Comece a alugar seus imóveis!</h1>
+  </ion-text>
+  <div id="container">
+    <ion-item lines="none">
+      <ion-label position="stacked">Nome Completo</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">E-mail</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Telefone</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Celular</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Data de Nascimento</ion-label>
+      <ion-input type="date"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Sexo</ion-label>
+      <ion-select placeholder="Selecione">
+        <ion-select-option value="f">Feminino</ion-select-option>
+        <ion-select-option value="m">Masculino</ion-select-option>
+        <ion-select-option value="n">Prefiro não informar</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" color="grapes">Cadastrar</ion-button>
+  </div>
 </ion-content>
