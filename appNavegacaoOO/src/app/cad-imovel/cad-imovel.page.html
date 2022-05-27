@@ -3,10 +3,117 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>CadImovel</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-text color="dark">
+    <h1>Cadastre aqui seu imóvel!</h1>
+  </ion-text>
+  <div id="container">
+    <ion-item lines="none">
+      <ion-label position="stacked">Endereço</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Nome da rua"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Bairro"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-input placeholder="CEP"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Cidade"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-input placeholder="UF"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-text class="ion-margin-start">
+      <small>
+        Informe a quantidade de cômodos presentes no imóvel
+      </small>
+      
+    </ion-text>
+    <ion-item lines="none">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label position="stacked">Quartos</ion-label>
+            <ion-input type="number" value="0"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-label position="stacked">Salas</ion-label>
+            <ion-input type="number" value="0"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label position="stacked">Banheiros</ion-label>
+            <ion-input type="number" value="0"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-label position="stacked">Cozinhas</ion-label>
+            <ion-input type="number" value="0"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label position="stacked">N° de andares</ion-label>
+            <ion-input type="number" value="0"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-label position="stacked">Complemento</ion-label>
+            <ion-input></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-text class="ion-margin-start">
+      <small>Informações adicionais</small>
+    </ion-text>
+    <ion-item lines="none">
+      <ion-label>É venal?</ion-label>
+      <ion-select placeholder="Selecione">
+        <ion-select-option value="s">Sim</ion-select-option>
+        <ion-select-option value="n">Não</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>É locável?</ion-label>
+      <ion-select placeholder="Selecione">
+        <ion-select-option value="s">Sim</ion-select-option>
+        <ion-select-option value="n">Não</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-input type="number" placeholder="Valor venal"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-input type="number" placeholder="Valor locação"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Situação</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+    <ion-button expand="block" color="grapes">Cadastrar</ion-button>
+  </div>
 </ion-content>
