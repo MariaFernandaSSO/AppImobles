@@ -1,32 +1,33 @@
 <ion-app>
   <ion-menu menuId="main-menu" content-id="main">
-    <ion-header>
-      <ion-toolbar>Menu</ion-toolbar>
-    </ion-header>
     <ion-content>
-      <ion-list>
+      <div class="menu-header-bg"></div>
+      <div class="profile-picture">
+        <img src="../assets/icon/profile.png">
+      </div>
+      <ion-list class="menu-items">
         <ion-menu-toggle>
           <ion-item routerLink="/cad-proprietario">
             <ion-icon name="briefcase-outline" slot="start"></ion-icon>
-            <ion-label>Cadastro Proprietario</ion-label>
+            Cadastro Proprietario
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item routerLink="/cad-imovel">
             <ion-icon name="bed-outline" slot="start"></ion-icon>
-            <ion-label>Cadastro Imóvel</ion-label>
+            Cadastro Imóvel
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item routerLink="/cad-locador">
             <ion-icon name="cash-outline" slot="start"></ion-icon>
-            <ion-label>Cadastro Locador</ion-label>
+            Cadastro Locador
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item routerLink="/cad-imobiliaria">
             <ion-icon name="megaphone-outline" slot="start"></ion-icon>
-            <ion-label>Cadastro Imobiliária</ion-label>
+            Cadastro Imobiliária
           </ion-item>
         </ion-menu-toggle>
       </ion-list>
