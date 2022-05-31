@@ -1,22 +1,22 @@
 export class Imovel {
-    private _endereco: String
-    private _bairro: String
-    private _cep: String
-    private _cidade: String
-    private _uf: String
+    private _endereco: string
+    private _bairro: string
+    private _cep: string
+    private _cidade: string
+    private _uf: string
     private _qtdQuartos: number
     private _qtdSalas: number
     private _qtdBanheiros: number
     private _qtdCozinhas: number
     private _andares: number
-    private _complemento: String
+    private _complemento: string
     private _valorVenal: number
     private _valorLocacao: number
     private _isLocavel: boolean
     private _isVenal: boolean
-    private _situacao: String
+    private _situacao: string
   
-    constructor(endereco: String, bairro: String, cep: String, cidade: String, uf: String, qtdQuartos: number, qtdSalas: number, qtdBanheiros: number, qtdCozinhas: number, andares: number, complemento: String, valorVenal: number, valorLocacao: number, isLocavel: boolean, isVenal: boolean, situacao: String){
+    constructor(endereco: string, bairro: string, cep: string, cidade: string, uf: string, qtdQuartos: number, qtdSalas: number, qtdBanheiros: number, qtdCozinhas: number, andares: number, complemento: string, valorVenal: number, valorLocacao: number, isLocavel: boolean, isVenal: boolean, situacao: string){
       this._endereco = endereco
       this._bairro = bairro
       this._cep = cep
@@ -36,47 +36,47 @@ export class Imovel {
     }
   
     // endereco
-    public get endereco(): String{
+    public get endereco(): string{
       return this._endereco
     }
   
-    public set endereco(endereco: String){
+    public set endereco(endereco: string){
       this._endereco = endereco
     }
   
     // bairro
-    public get bairro(): String{
+    public get bairro(): string{
       return this._bairro
     }
   
-    public set bairro(bairro: String){
+    public set bairro(bairro: string){
       this._bairro = bairro
     }
   
     // cep
-    public get cep(): String{
+    public get cep(): string{
       return this._cep
     }
   
-    public set cep(cep: String){
+    public set cep(cep: string){
       this._cep = cep
     }
   
     // cidade
-    public get cidade(): String{
+    public get cidade(): string{
       return this._cidade
     }
   
-    public set cidade(cidade: String){
+    public set cidade(cidade: string){
       this._cidade = cidade
     }
   
     // uf 
-    public get uf(): String{
+    public get uf(): string{
       return this._uf
     }
   
-    public set uf(uf: String){
+    public set uf(uf: string){
       this._uf = uf
     }
   
@@ -126,11 +126,11 @@ export class Imovel {
     }
   
     // complemento
-    public get complemento(): String{
+    public get complemento(): string{
       return this._complemento
     }
   
-    public set complemento(complemento: String){
+    public set complemento(complemento: string){
       this._complemento = complemento
     }
   
@@ -171,11 +171,11 @@ export class Imovel {
     }
   
     // situacao
-    public get situacao(): String{
+    public get situacao(): string{
       return this._situacao
     }
   
-    public set situacao(situacao: String){
+    public set situacao(situacao: string){
       this._situacao = situacao
     }
 }

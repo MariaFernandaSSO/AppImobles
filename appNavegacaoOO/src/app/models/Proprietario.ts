@@ -1,12 +1,12 @@
 export class Proprietario {
-    private _nome: String
-    private _telefone: String
+    private _nome: string
+    private _telefone: string
     private _dataNascimento: Date
-    private _sexo: String
-    private _fone: String
-    private _email: String
+    private _sexo: string
+    private _fone: string
+    private _email: string
   
-    constructor(nome: String, telefone: String, dataNascimento: Date, sexo: String, fone: String, email: String){
+    constructor(nome: string, telefone: string, dataNascimento: Date, sexo: string, fone: string, email: string){
       this._nome = nome
       this._telefone = telefone
       this._dataNascimento = dataNascimento
@@ -16,20 +16,20 @@ export class Proprietario {
     }
   
     // nome
-    public get nome(): String{
+    public get nome(): string{
         return this._nome
     }
   
-    public set nome(nome: String){
+    public set nome(nome: string){
         this._nome = nome
     }
   
     // telefone
-    public get telefone(): String{
+    public get telefone(): string{
         return this._telefone
     }
   
-    public set telefone(telefone: String){
+    public set telefone(telefone: string){
         this._telefone = telefone
     }
   
@@ -43,29 +43,29 @@ export class Proprietario {
     }
   
     // sexo
-    public get sexo(): String{
+    public get sexo(): string{
         return this._sexo
     }
   
-    public set sexo(sexo: String){
+    public set sexo(sexo: string){
         this._sexo = sexo
     }
   
     // fone
-    public get fone(): String{
+    public get fone(): string{
         return this._fone
     }
   
-    public set fone(fone: String){
+    public set fone(fone: string){
         this._fone = fone
     }
   
     // email
-    public get email(): String{
+    public get email(): string{
         return this._email
     }
   
-    public set email(email: String){
+    public set email(email: string){
         this._email = email
     }
 }

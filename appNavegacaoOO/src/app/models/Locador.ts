@@ -1,14 +1,14 @@
 export class Locador {
-  private _nome : String 
-  private _telefone : String
+  private _nome : string 
+  private _telefone : string
   private _dataNascimento: Date
-  private _email : String
-  private _fone : String
-  private _sexo : String
+  private _email : string
+  private _fone : string
+  private _sexo : string
   private _rendaMensal: number
-  private _nomeFiador: String
+  private _nomeFiador: string
 
- constructor(nome: String, telefone: String, dataNascimento: Date, email: String, fone: String, sexo: String, rendaMensal: number, nomeFiador: String) {
+ constructor(nome: string, telefone: string, dataNascimento: Date, email: string, fone: string, sexo: string, rendaMensal: number, nomeFiador: string) {
    this._nome = nome
    this._telefone = telefone
    this._dataNascimento = dataNascimento
@@ -20,20 +20,20 @@ export class Locador {
  }
 
  // Nome
- public set nome(nome: String){
+ public set nome(nome: string){
    this._nome = nome
  }
  
- public get nome(): String{
+ public get nome(): string{
    return this._nome
 }
 
  // Telefone
- public set telefone(telefone: String){
+ public set telefone(telefone: string){
   this._telefone = telefone
 }
 
-public get telefone(): String{
+public get telefone(): string{
   return this._telefone
 }
 
@@ -47,29 +47,29 @@ public get dataNasc(): Date{
 }
 
  // Email
- public set email(email: String){
+ public set email(email: string){
   this._email = email
 }
 
-public get email(): String{
+public get email(): string{
   return this._email
 }
 
  // Fone
- public set fone(fone: String){
+ public set fone(fone: string){
   this._fone = fone
 }
 
-public get fone(): String{
+public get fone(): string{
   return this._fone
 }
 
  // Sexo
- public set sexo(sexo: String){
+ public set sexo(sexo: string){
   this._sexo = sexo
 }
 
-public get sexo(): String{
+public get sexo(): string{
   return this._sexo
 }
 
@@ -83,11 +83,11 @@ public get rendaMensal(): number{
 }
 
 // Nome do Fiador
-public set nomeFiador(nomeFiador: String){
+public set nomeFiador(nomeFiador: string){
   this._nomeFiador = nomeFiador
 }
 
-public get nomeFiador(): String{
+public get nomeFiador(): string{
   return this._nomeFiador
 }
 

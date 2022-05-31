@@ -1,12 +1,12 @@
 export class Imobiliaria {
-  private _nome : String 
-  private _endereco : String
-  private _cidade : String 
-  private _bairro: String
-  private _fone: String
-  private _site: String
+  private _nome : string 
+  private _endereco : string
+  private _cidade : string 
+  private _bairro: string
+  private _fone: string
+  private _site: string
 
- constructor(nome: String, endereco: String, cidade: String, bairro: String, fone: String, site: String) {
+ constructor(nome: string, endereco: string, cidade: string, bairro: string, fone: string, site: string) {
    this._nome = nome
    this._endereco = endereco
    this._cidade = cidade
@@ -16,60 +16,60 @@ export class Imobiliaria {
  }
 
  // Nome
- public set nome(nome: String){
+ public set nome(nome: string){
    this._nome = nome
  }
  
- public get nome(): String{
+ public get nome(): string{
    return this._nome
 }
 
  // Endereco
 
- public set endereco(endereco: String){
+ public set endereco(endereco: string){
    this._endereco = endereco
  }
 
- public get endereco(): String {
+ public get endereco(): string {
    return this._endereco
  }
 
  // Cidade
  
- public set cidade(cidade: String){
+ public set cidade(cidade: string){
    this._cidade = cidade 
  }
 
- public get cidade(): String {
+ public get cidade(): string {
    return this._cidade
  }
 
  // Bairro
 
- public set bairro(bairro: String){
+ public set bairro(bairro: string){
    this._bairro = bairro
  }
 
- public get bairro(): String {
+ public get bairro(): string {
    return this._bairro
  }
  // Fone
 
- public set fone(fone: String){
+ public set fone(fone: string){
    this._fone = fone
  }
 
- public get fone(): String {
+ public get fone(): string {
    return this._fone;
  }
 
  // Site
 
- public set site(site: String){
+ public set site(site: string){
    this._fone = site
  }
 
- public get site(): String {
+ public get site(): string {
    return this._site
  }
 }
