@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PessoasService } from '../services/pessoas/pessoas.service';
 
 @Component({
   selector: 'app-home',
@@ -26,6 +27,20 @@ export class HomePage {
     },
   ];
 
-  constructor() {}
+
+  constructor(
+    private pessoasService: PessoasService
+  ) {
+
+    this.pessoasService.buscarPessoas2().subscribe(
+      (data) => {
+        console.log(data)
+      },
+      (error) => {
+        console.error(error)
+      }
+    )
+    
+  }
 
 }

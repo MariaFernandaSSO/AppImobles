@@ -7,6 +7,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PessoasService } from './services/pessoas/pessoas.service';
+import { ImobiliariasService } from './services/imobiliarias/imobiliarias.service';
+import { ContratoImobiliariasProprietariosService } from './services/contratos_imobiliarias_proprietarios/contrato-imobiliarias-proprietarios.service';
+import { ContratosImobiliariasClientesService } from './services/contratos_imobiliarias_clientes/contratos-imobiliarias-clientes.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +21,12 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+  PessoasService,
+  ImobiliariasService,
+  ContratoImobiliariasProprietariosService,
+  ContratosImobiliariasClientesService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
