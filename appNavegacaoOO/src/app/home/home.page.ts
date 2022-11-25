@@ -29,17 +29,8 @@ export class HomePage {
 
 
   constructor(
-    private pessoasService: PessoasService
-  ) {
 
-    this.pessoasService.buscarPessoas2().subscribe(
-      (data) => {
-        console.log(data)
-      },
-      (error) => {
-        console.error(error)
-      }
-    )
+  ) {
     
   }
 

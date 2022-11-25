@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImobiliariasService } from '../services/imobiliarias/imobiliarias.service';
 
 @Component({
   selector: 'app-cad-imobiliaria',
@@ -7,7 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadImobiliariaPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private imobiliariaService: ImobiliariasService
+  ) {
+    this.getImobiliarias()
+  }
+
+  getImobiliarias(){
+    this.imobiliariaService.buscarImobiliarias().subscribe(
+      (data) => {
+        console.log(data)
+      },
+      (error) => {
+        console.error(error)
+      }
+    )
+  }
 
   ngOnInit() {
   }
