@@ -1,4 +1,5 @@
-export class Imobiliaria {
+import { Pessoa } from "./Pessoa"
+export class Imobiliaria extends Pessoa{
   private _nome : string 
   private _endereco : string
   private _cidade : string 
@@ -6,7 +7,7 @@ export class Imobiliaria {
   private _fone: string
   private _site: string
 
- constructor(nome: string, endereco: string, cidade: string, bairro: string, fone: string, site: string) {
+ /*constructor(nome: string, endereco: string, cidade: string, bairro: string, fone: string, site: string) {
    this._nome = nome
    this._endereco = endereco
    this._cidade = cidade
@@ -71,5 +72,5 @@ export class Imobiliaria {
 
  public get site(): string {
    return this._site
- }
+ }*/
 }
