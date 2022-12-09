@@ -12,57 +12,95 @@
   </ion-text>
   <div id="container">
     <ion-item lines="none">
+      <ion-label position="stacked">Descrição do imóvel</ion-label>
+      <ion-input type="text" [(ngModel)]="imovel.descricao"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
       <ion-label position="stacked">Endereço</ion-label>
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-input placeholder="Nome da rua"></ion-input>
+            <ion-input placeholder="Nome da rua" [(ngModel)]="imovel.rua"></ion-input>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-input placeholder="Bairro"></ion-input>
-          </ion-col>
-          <ion-col>
-            <ion-input placeholder="CEP"></ion-input>
+            <ion-input placeholder="Bairro" [(ngModel)]="imovel.bairro"></ion-input>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-input placeholder="Cidade"></ion-input>
+            <ion-input placeholder="Número" [(ngModel)]="imovel.numero"></ion-input>
           </ion-col>
           <ion-col>
-            <ion-input placeholder="UF"></ion-input>
+            <ion-input placeholder="CEP" [(ngModel)]="imovel.cep"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Cidade" [(ngModel)]="imovel.cidade"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-input placeholder="UF" [(ngModel)]="imovel.uf"></ion-input>
           </ion-col>
         </ion-row>
       </ion-grid>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Localidade</ion-label>
+      <ion-select placeholder="Selecione" [(ngModel)]="imovel.localidade">
+        <ion-select-option value="praia">Praia</ion-select-option>
+        <ion-select-option value="serra">Serra</ion-select-option>
+        <ion-select-option value="cidade">Cidade</ion-select-option>
+        <ion-select-option value="ilha">Ilha</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Tipo do Imóvel</ion-label>
+      <ion-select placeholder="Selecione" [(ngModel)]="imovel.tipo_imovel">
+        <ion-select-option value="casa">Casa</ion-select-option>
+        <ion-select-option value="apartamento">Apartamento</ion-select-option>
+        <ion-select-option value="casa de hóspedes">Casa de Hóspedes</ion-select-option>
+        <ion-select-option value="quitinete">Quitinete</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-text class="ion-margin-start">
+      <small>
+        Descrição da localidade
+      </small>
+    </ion-text>
+    <ion-item lines="none">
+      <ion-select placeholder="Universidades perto?" [(ngModel)]="imovel.universidades_perto">
+        <ion-select-option value="true">Sim</ion-select-option>
+        <ion-select-option value="false">Não</ion-select-option>
+      </ion-select>
+      <ion-input type="text" placeholder="Descrição" [(ngModel)]="imovel.descricao_universidade"></ion-input>
     </ion-item>
     <ion-text class="ion-margin-start">
       <small>
         Informe a quantidade de cômodos presentes no imóvel
       </small>
-      
     </ion-text>
     <ion-item lines="none">
       <ion-grid>
         <ion-row>
           <ion-col>
             <ion-label position="stacked">Quartos</ion-label>
-            <ion-input type="number" value="0"></ion-input>
+            <ion-input type="number" [(ngModel)]="imovel.quartos"></ion-input>
           </ion-col>
           <ion-col>
             <ion-label position="stacked">Salas</ion-label>
-            <ion-input type="number" value="0"></ion-input>
+            <ion-input type="number" [(ngModel)]="imovel.salas"></ion-input>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <ion-label position="stacked">Banheiros</ion-label>
-            <ion-input type="number" value="0"></ion-input>
+            <ion-input type="number" [(ngModel)]="imovel.banheiros"></ion-input>
           </ion-col>
           <ion-col>
             <ion-label position="stacked">Cozinhas</ion-label>
-            <ion-input type="number" value="0"></ion-input>
+            <ion-input type="number" [(ngModel)]="imovel.cozinhas"></ion-input>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -71,12 +109,12 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-label position="stacked">N° de andares</ion-label>
-            <ion-input type="number" value="0"></ion-input>
+            <ion-label position="stacked">N° de vagas</ion-label>
+            <ion-input type="number" [(ngModel)]="imovel.vagas"></ion-input>
           </ion-col>
           <ion-col>
             <ion-label position="stacked">Complemento</ion-label>
-            <ion-input></ion-input>
+            <ion-input type="text" [(ngModel)]="imovel.complemento"></ion-input>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -85,35 +123,19 @@
       <small>Informações adicionais</small>
     </ion-text>
     <ion-item lines="none">
-      <ion-label>É venal?</ion-label>
-      <ion-select placeholder="Selecione">
-        <ion-select-option value="s">Sim</ion-select-option>
-        <ion-select-option value="n">Não</ion-select-option>
+      <ion-select placeholder="É mobiliado?" [(ngModel)]="imovel.mobiliado">
+        <ion-select-option value="true">Sim</ion-select-option>
+        <ion-select-option value="false">Não</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item lines="none">
-      <ion-label>É locável?</ion-label>
-      <ion-select placeholder="Selecione">
-        <ion-select-option value="s">Sim</ion-select-option>
-        <ion-select-option value="n">Não</ion-select-option>
-      </ion-select>
+      <ion-label position="stacked">Área Construída</ion-label>
+      <ion-input type="number" [(ngModel)]="imovel.area_construida"></ion-input>
     </ion-item>
     <ion-item lines="none">
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-input type="number" placeholder="Valor venal"></ion-input>
-          </ion-col>
-          <ion-col>
-            <ion-input type="number" placeholder="Valor locação"></ion-input>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <ion-label position="stacked">Área do Terreno</ion-label>
+      <ion-input type="number" [(ngModel)]="imovel.area_terreno"></ion-input>
     </ion-item>
-    <ion-item lines="none">
-      <ion-label position="stacked">Situação</ion-label>
-      <ion-textarea></ion-textarea>
-    </ion-item>
-    <ion-button expand="block" color="grapes">Cadastrar</ion-button>
+    <ion-button expand="block" color="grapes" (click)="cadastrarImovel()">Cadastrar</ion-button>
   </div>
 </ion-content>

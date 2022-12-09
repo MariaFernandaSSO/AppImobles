@@ -1,5 +1,5 @@
 export class Imovel {
-  private _id: number
+  id: number
   descricao: string
   rua: string 
   numero: string
@@ -22,10 +22,6 @@ export class Imovel {
   area_terreno: number
   mobiliado: boolean
   id_proprietario: number
-
-  public get id(): number {
-    return this._id
-  }
 }
   
   

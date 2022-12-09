@@ -8,7 +8,7 @@ import { Imovel } from 'src/app/models/Imovel';
 })
 export class ImoveisService {
 
-  private readonly URL_E = "https://3000-mariafernan-3egbapi0810-p73zs3u29op.ws-us74.gitpod.io/"
+  private readonly URL_E = "https://3000-mariafernan-3egbapi0810-uhrrqkokn7p.ws-us78.gitpod.io/"
   private readonly URL_M = ""
   private readonly URL = this.URL_E
 
