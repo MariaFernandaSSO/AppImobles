@@ -15,6 +15,18 @@ export class CadClientePage implements OnInit {
   }
 
   ngOnInit() {
+    this.exibirClientes()
+  }
+
+  exibirClientes(): void {
+    this.clientesService.getClientes().subscribe({
+      next: (data) => {
+        console.log(data)
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
   }
 
   cadastrarCliente(): void {

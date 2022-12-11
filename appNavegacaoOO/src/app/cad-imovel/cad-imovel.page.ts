@@ -16,7 +16,7 @@ export class CadImovelPage implements OnInit {
   }
 
   ngOnInit() {
-    
+    this.exibirImoveis()
   }
 
   exibirImoveis(): void {
@@ -25,7 +25,7 @@ export class CadImovelPage implements OnInit {
         console.log(data)
       },
       error: (error) => {
-        console.error(error)
+        console.error(error.message)
       }
     })
   }

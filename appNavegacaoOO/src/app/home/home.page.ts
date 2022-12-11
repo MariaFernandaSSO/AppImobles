@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { FuncionariosService } from '../services/funcionarios/funcionarios.service';
 import { ImoveisService } from '../services/imoveis/imoveis.service';
-import { UsuariosService } from '../services/usuarios/usuarios.service';
 
 @Component({
   selector: 'app-home',
@@ -29,43 +27,7 @@ export class HomePage {
     },
   ];
 
-  constructor(private usuariosService: UsuariosService, private imoveisService: ImoveisService, private funcionariosService: FuncionariosService) {
-    this.getUsuarios()
-    this.getImoveis()
-    this.getFuncionarios()
-  }
-  
-  getUsuarios() {
-    this.usuariosService.getUsuarios().subscribe(
-      (data) => {
-        console.log(data)
-      },
-      (error) => {
-        console.error(error)
-      }
-    )
-  }
+  constructor() {}
 
-  getImoveis() {
-    this.imoveisService.getImoveis().subscribe(
-      (data) => {
-        console.log(data)
-      },
-      (error) => {
-        console.error(error)
-      }
-    )
-  }
-
-  getFuncionarios() {
-    this.funcionariosService.getFuncionarios().subscribe(
-      (data) => {
-        console.log(data)
-      },
-      (error) => {
-        console.error(error)
-      }
-    )
-  }
 
 }

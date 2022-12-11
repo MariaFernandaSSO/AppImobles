@@ -15,7 +15,7 @@ export class ImoveisService {
   constructor(private httpClient: HttpClient) { }
 
   getImoveis(): Observable<any> {
-    return this.httpClient.get<Imovel>(`${this.URL}imovel`)
+    return this.httpClient.get<Imovel>(`${this.URL}imoveis`)
   }
 
   postImovel(imovel: Imovel): Observable<any> {

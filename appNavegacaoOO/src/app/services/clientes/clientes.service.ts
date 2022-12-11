@@ -15,7 +15,7 @@ export class ClientesService {
   constructor(private httpClient: HttpClient) { }
 
   getClientes(): Observable<any> {
-    return this.httpClient.get<Cliente>(`${this.URL}cliente`)
+    return this.httpClient.get<Cliente>(`${this.URL}clientes`)
   }
 
   postCliente(cliente: Cliente): Observable<any> {
