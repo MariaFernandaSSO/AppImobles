@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Funcionario } from '../models/Funcionario';
 import { FuncionariosService } from '../services/funcionarios/funcionarios.service';
 
 @Component({
@@ -8,10 +9,11 @@ import { FuncionariosService } from '../services/funcionarios/funcionarios.servi
 })
 export class CadFuncionarioPage implements OnInit {
 
+  funcionario: Funcionario
   constructor(
     private funcionariosService: FuncionariosService
   ) {
-    this.getFuncionarios()
+    this.funcionario = new Funcionario()
    }
 
   getFuncionarios(){
@@ -25,7 +27,21 @@ export class CadFuncionarioPage implements OnInit {
     )
   }
 
+
+  cadastrarFuncionario(): void {
+    this.funcionariosService.postFuncionario(this.funcionario).subscribe({
+      next: (data) => {
+        console.log(data)
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
+  }
+
+
   ngOnInit() {
+    this.getFuncionarios()
   }
 
 }

@@ -11,6 +11,7 @@ import { PessoasService } from './services/pessoas/pessoas.service';
 import { ImobiliariasService } from './services/imobiliarias/imobiliarias.service';
 import { ContratoImobiliariasProprietariosService } from './services/contratos_imobiliarias_proprietarios/contrato-imobiliarias-proprietarios.service';
 import { ContratosImobiliariasClientesService } from './services/contratos_imobiliarias_clientes/contratos-imobiliarias-clientes.service';
+import { FuncionariosService } from './services/funcionarios/funcionarios.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +26,8 @@ import { ContratosImobiliariasClientesService } from './services/contratos_imobi
   PessoasService,
   ImobiliariasService,
   ContratoImobiliariasProprietariosService,
-  ContratosImobiliariasClientesService
+  ContratosImobiliariasClientesService,
+  FuncionariosService
   ],
   bootstrap: [AppComponent],
 })

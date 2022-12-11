@@ -10,30 +10,67 @@
       <div class="formulario">
         <h3> Cadastre sua imobiliaria aqui</h3>
         <ion-item lines="none">
-          <ion-label position="stacked">Nome</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-label position="stacked">Endereço</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-label position="stacked">Cidade</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-label position="stacked">Bairro</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-label position="stacked">Nome Completo</ion-label>
+          <ion-input type="text" [(ngModel)]="imobiliaria.nome"></ion-input>
         </ion-item>
         <ion-item lines="none">
           <ion-label position="stacked">Telefone</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="imobiliaria.telefone"></ion-input>
+        </ion-item>
+        <ion-text style="margin: 20px;">
+          <small>Endereço</small>
+        </ion-text>
+        <ion-item lines="none">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-input placeholder="Nome da rua" [(ngModel)]="imobiliaria.rua"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-input placeholder="Bairro" [(ngModel)]="imobiliaria.bairro"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-input placeholder="Número" [(ngModel)]="imobiliaria.numero"></ion-input>
+              </ion-col>
+              <ion-col>
+                <ion-input placeholder="CEP" [(ngModel)]="imobiliaria.cep"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-input placeholder="Cidade" [(ngModel)]="imobiliaria.cidade"></ion-input>
+              </ion-col>
+              <ion-col>
+                <ion-input placeholder="UF" [(ngModel)]="imobiliaria.uf"></ion-input>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
         </ion-item>
         <ion-item lines="none">
-          <ion-label position="stacked">Site</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-label>Tipo de cadastro</ion-label>
+          <ion-select placeholder="Selecione" [(ngModel)]="imobiliaria.tipo">
+            <ion-select-option value="física">Pessoa Física</ion-select-option>
+            <ion-select-option value="jurídica">Pessoa Jurídica</ion-select-option>
+          </ion-select>
         </ion-item>
-        <ion-button expand="block" color="grapes">Cadastrar</ion-button>
+    
+        <ion-item lines="none">
+          <ion-label position="stacked">CNPJ</ion-label>
+          <ion-input type="text" [(ngModel)]="imobiliaria.cnpj"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">IE</ion-label>
+          <ion-input type="text" [(ngModel)]="imobiliaria.ie"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Razão Social</ion-label>
+          <ion-input type="text" [(ngModel)]="imobiliaria.razao_social"></ion-input>
+        </ion-item>
+        <ion-button expand="block" color="grapes" (click)="cadastrarImobiliaria()">Cadastrar</ion-button>
     
       </div>
 </ion-content>

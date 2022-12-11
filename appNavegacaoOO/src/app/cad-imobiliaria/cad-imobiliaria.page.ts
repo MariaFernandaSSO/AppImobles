@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Imobiliaria } from '../models/Imobiliaria';
 import { ImobiliariasService } from '../services/imobiliarias/imobiliarias.service';
 
 @Component({
@@ -8,10 +9,11 @@ import { ImobiliariasService } from '../services/imobiliarias/imobiliarias.servi
 })
 export class CadImobiliariaPage implements OnInit {
 
+  imobiliaria : Imobiliaria
   constructor(
     private imobiliariaService: ImobiliariasService
   ) {
-    this.getImobiliarias()
+    this.imobiliaria = new Imobiliaria()
   }
 
   getImobiliarias(){
@@ -25,7 +27,20 @@ export class CadImobiliariaPage implements OnInit {
     )
   }
 
+  cadastrarImobiliaria(): void {
+    this.imobiliariaService.postImobiliaria(this.imobiliaria).subscribe({
+      next: (data) => {
+        console.log(data)
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
+  }
+
+
   ngOnInit() {
+    this.getImobiliarias()
   }
 
 }
