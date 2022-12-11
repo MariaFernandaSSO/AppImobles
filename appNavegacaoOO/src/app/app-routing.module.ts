@@ -20,12 +20,12 @@ const routes: Routes = [
     loadChildren: () => import('./cad-imobiliaria/cad-imobiliaria.module').then( m => m.CadImobiliariaPageModule)
   },
   {
-    path: 'cad-proprietario',
-    loadChildren: () => import('./cad-proprietario/cad-proprietario.module').then( m => m.CadProprietarioPageModule)
-  },
-  {
     path: 'cad-locador',
     loadChildren: () => import('./cad-locador/cad-locador.module').then( m => m.CadLocadorPageModule)
+  },
+  {
+    path: 'cad-cliente',
+    loadChildren: () => import('./cad-cliente/cad-cliente.module').then( m => m.CadClientePageModule)
   },
 ];
 

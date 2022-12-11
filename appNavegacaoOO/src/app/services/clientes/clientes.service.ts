@@ -8,7 +8,7 @@ import { Cliente } from 'src/app/models/Cliente';
 })
 export class ClientesService {
 
-  private readonly URL_E = "https://3000-mariafernan-3egbapi0810-p73zs3u29op.ws-us77.gitpod.io/"
+  private readonly URL_E = "https://3000-mariafernan-3egbapi0810-uhrrqkokn7p.ws-us78.gitpod.io/"
   private readonly URL_M = ""
   private readonly URL = this.URL_E
 
@@ -19,6 +19,6 @@ export class ClientesService {
   }
 
   postCliente(cliente: Cliente): Observable<any> {
-    return this.httpClient.post<Cliente>(`${this.URL}cliente`, cliente)
+    return this.httpClient.post<Cliente>(`${this.URL}cliente/usuario`, cliente)
   }
 }

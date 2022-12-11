@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CadProprietarioPage } from './cad-proprietario.page';
+import { CadClientePage } from './cad-cliente.page';
 
-describe('CadProprietarioPage', () => {
-  let component: CadProprietarioPage;
-  let fixture: ComponentFixture<CadProprietarioPage>;
+describe('CadClientePage', () => {
+  let component: CadClientePage;
+  let fixture: ComponentFixture<CadClientePage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CadProprietarioPage ],
+      declarations: [ CadClientePage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CadProprietarioPage);
+    fixture = TestBed.createComponent(CadClientePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
