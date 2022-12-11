@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'cad-contrato-imobiliaria-proprietario',
     loadChildren: () => import('./cad-contrato-imobiliaria-proprietario/cad-contrato-imobiliaria-proprietario.module').then( m => m.CadContratoImobiliariaProprietarioPageModule)
   },
+  {
+    path: 'cad-funcionario',
+    loadChildren: () => import('./cad-funcionario/cad-funcionario.module').then( m => m.CadFuncionarioPageModule)
+  },
 ];
 
 @NgModule({
