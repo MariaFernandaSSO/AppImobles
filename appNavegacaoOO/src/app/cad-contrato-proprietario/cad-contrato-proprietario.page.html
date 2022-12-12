@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text color="dark">
+    <h1>Cadastre aqui seu imóvel!</h1>
+  </ion-text>
+  <div id="container">
+    <ion-item lines="none">
+      <ion-label position="stacked">Data de início do contrato</ion-label>
+      <ion-input type="date" [(ngModel)]="contrato.data_inicial"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Data de término do contrato</ion-label>
+      <ion-input type="date" [(ngModel)]="contrato.data_termino"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Tipo de Contrato</ion-label>
+      <ion-select placeholder="Selecione" [(ngModel)]="contrato.tipo_contrato">
+        <ion-select-option value="aluguel">Aluguel</ion-select-option>
+        <ion-select-option value="venda">Venda</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Preço do Condomínio</ion-label>
+      <ion-input type="number" [(ngModel)]="contrato.preco_condominio"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Preço do Aluguel/Venda</ion-label>
+      <ion-input type="number" [(ngModel)]="contrato.preco"></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="grapes" (click)="cadastrarContrato()">Cadastrar</ion-button>
+  </div>
+</ion-content>

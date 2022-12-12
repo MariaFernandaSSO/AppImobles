@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'cad-cliente',
     loadChildren: () => import('./cad-cliente/cad-cliente.module').then( m => m.CadClientePageModule)
   },
+  {
+    path: 'cad-contrato-proprietario',
+    loadChildren: () => import('./cad-contrato-proprietario/cad-contrato-proprietario.module').then( m => m.CadContratoProprietarioPageModule)
+  },
 ];
 
 @NgModule({

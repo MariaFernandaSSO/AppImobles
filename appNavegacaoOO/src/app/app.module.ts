@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ImoveisService } from './services/imoveis/imoveis.service';
 import { ClientesService } from './services/clientes/clientes.service';
+import { ContratoProprietarioService } from './services/contrato-proprietario/contrato-proprietario.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { ClientesService } from './services/clientes/clientes.service';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ClientesService,
     ImoveisService,
+    ContratoProprietarioService
   ],
   bootstrap: [AppComponent],
 })
