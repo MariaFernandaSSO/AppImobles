@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CadProprietarioPageRoutingModule } from './cad-proprietario-routing.module';
+import { CadClientePageRoutingModule } from './cad-cliente-routing.module';
 
-import { CadProprietarioPage } from './cad-proprietario.page';
+import { CadClientePage } from './cad-cliente.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CadProprietarioPageRoutingModule
+    CadClientePageRoutingModule
   ],
-  declarations: [CadProprietarioPage]
+  declarations: [CadClientePage]
 })
-export class CadProprietarioPageModule {}
+export class CadClientePageModule {}

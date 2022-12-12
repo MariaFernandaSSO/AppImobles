@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text color="dark">
+    <h1>Comece a alugar seus imóveis!</h1>
+  </ion-text>
+  <div id="container">
+    <ion-item lines="none">
+      <ion-label position="stacked">Nome Completo</ion-label>
+      <ion-input type="text" [(ngModel)]="cliente.nome"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Telefone</ion-label>
+      <ion-input type="text" [(ngModel)]="cliente.telefone"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Data de Nascimento</ion-label>
+      <ion-input type="date" [(ngModel)]="cliente.data_nascimento"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Sexo</ion-label>
+      <ion-select placeholder="Selecione" [(ngModel)]="cliente.sexo">
+        <ion-select-option value="feminino">Feminino</ion-select-option>
+        <ion-select-option value="masculino">Masculino</ion-select-option>
+        <ion-select-option value="não informado">Prefiro não informar</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Orientação sexual</ion-label>
+      <ion-input type="text" [(ngModel)]="cliente.orientacao"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Nome social</ion-label>
+      <ion-input type="text" [(ngModel)]="cliente.nome_social"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Raça</ion-label>
+      <ion-select placeholder="Selecione" [(ngModel)]="cliente.raca">
+        <ion-select-option value="branco">Branco</ion-select-option>
+        <ion-select-option value="pardo">Pardo</ion-select-option>
+        <ion-select-option value="preto">Preto</ion-select-option>
+        <ion-select-option value="amarelo">Amarelo</ion-select-option>
+        <ion-select-option value="indígena">Indígena</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Possuí deficiência?</ion-label>
+      <ion-select placeholder="Selecione" [(ngModel)]="cliente.deficiencia">
+        <ion-select-option value="true">Sim</ion-select-option>
+        <ion-select-option value="false">Não</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Descrição da deficiência</ion-label>
+      <ion-input type="text" [(ngModel)]="cliente.descricao_deficiencia"></ion-input>
+    </ion-item>
+    <ion-text style="margin: 20px;">
+      <small>Endereço</small>
+    </ion-text>
+    <ion-item lines="none">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Nome da rua" [(ngModel)]="cliente.rua"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Bairro" [(ngModel)]="cliente.bairro"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Número" [(ngModel)]="cliente.numero"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-input placeholder="CEP" [(ngModel)]="cliente.cep"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Cidade" [(ngModel)]="cliente.cidade"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-input placeholder="UF" [(ngModel)]="cliente.uf"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Tipo de cadastro</ion-label>
+      <ion-select placeholder="Selecione" [(ngModel)]="cliente.tipo">
+        <ion-select-option value="física">Pessoa Física</ion-select-option>
+        <ion-select-option value="jurídica">Pessoa Jurídica</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="usuario">
+      <h3>Crie um usuário</h3>
+      <ion-item lines="none">
+        <ion-input type="text" placeholder="Nome de usuário" [(ngModel)]="cliente.username"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-input type="password" placeholder="Senha" [(ngModel)]="cliente.password"></ion-input>
+      </ion-item>
+    </div>
+    <ion-button expand="block" color="grapes" (click)="cadastrarCliente()">Cadastrar</ion-button>
+  </div>
+</ion-content>
+
