@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ImoveisService } from '../services/imoveis/imoveis.service';
 
 @Component({
   selector: 'app-home',
@@ -27,7 +26,12 @@ export class HomePage {
     },
   ];
 
-  constructor() {}
+
+  constructor(
+
+  ) {
+    
+  }
 
 
 }

@@ -1,0 +1,86 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <div class="formulario">
+        <h3> Cadastre teu funcionario:</h3>
+
+        <ion-item lines="none">
+          <ion-label position="stacked">Nome Completo</ion-label>
+          <ion-input type="text" [(ngModel)]="funcionario.nome"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Telefone</ion-label>
+          <ion-input type="text" [(ngModel)]="funcionario.telefone"></ion-input>
+        </ion-item>
+        <ion-text style="margin: 20px;">
+          <small>Endereço</small>
+        </ion-text>
+        <ion-item lines="none">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-input placeholder="Nome da rua" [(ngModel)]="funcionario.rua"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-input placeholder="Bairro" [(ngModel)]="funcionario.bairro"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-input placeholder="Número" [(ngModel)]="funcionario.numero"></ion-input>
+              </ion-col>
+              <ion-col>
+                <ion-input placeholder="CEP" [(ngModel)]="funcionario.cep"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-input placeholder="Cidade" [(ngModel)]="funcionario.cidade"></ion-input>
+              </ion-col>
+              <ion-col>
+                <ion-input placeholder="UF" [(ngModel)]="funcionario.uf"></ion-input>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>Tipo de cadastro</ion-label>
+          <ion-select placeholder="Selecione" [(ngModel)]="funcionario.tipo">
+            <ion-select-option value="física">Pessoa Física</ion-select-option>
+            <ion-select-option value="jurídica">Pessoa Jurídica</ion-select-option>
+          </ion-select>
+        </ion-item>
+    
+        <div class="usuario">
+          <h3>Crie um usuário</h3>
+          <ion-item lines="none">
+            <ion-input type="text" placeholder="Nome de usuário" [(ngModel)]="funcionario.username"></ion-input>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-input type="password" placeholder="Senha" [(ngModel)]="funcionario.password"></ion-input>
+          </ion-item>
+      </div>
+    
+        <ion-item lines="none">
+          <ion-label position="stacked">Data Admissão</ion-label>
+          <ion-input type="date" [(ngModel)]="funcionario.data_admissao"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Cargo</ion-label>
+          <ion-input type="text" [(ngModel)]="funcionario.cargo"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Salário</ion-label>
+          <ion-input type="number" [(ngModel)]="funcionario.salario"></ion-input>
+        </ion-item>
+        <ion-button expand="block" color="grapes" (click)="cadastrarFuncionario()" >Cadastrar</ion-button>
+      </div>
+</ion-content>

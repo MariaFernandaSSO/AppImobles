@@ -10,6 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { ImoveisService } from './services/imoveis/imoveis.service';
 import { ClientesService } from './services/clientes/clientes.service';
 import { ContratoProprietarioService } from './services/contrato-proprietario/contrato-proprietario.service';
+import { PessoasService } from './services/pessoas/pessoas.service';
+import { ImobiliariasService } from './services/imobiliarias/imobiliarias.service';
+import { ContratoImobiliariasProprietariosService } from './services/contratos_imobiliarias_proprietarios/contrato-imobiliarias-proprietarios.service';
+import { ContratosImobiliariasClientesService } from './services/contratos_imobiliarias_clientes/contratos-imobiliarias-clientes.service';
+import { FuncionariosService } from './services/funcionarios/funcionarios.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +29,12 @@ import { ContratoProprietarioService } from './services/contrato-proprietario/co
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ClientesService,
     ImoveisService,
-    ContratoProprietarioService
+    ContratoProprietarioService,
+    PessoasService,
+    ImobiliariasService,
+    ContratoImobiliariasProprietariosService,
+    ContratosImobiliariasClientesService,
+    FuncionariosService
   ],
   bootstrap: [AppComponent],
 })
