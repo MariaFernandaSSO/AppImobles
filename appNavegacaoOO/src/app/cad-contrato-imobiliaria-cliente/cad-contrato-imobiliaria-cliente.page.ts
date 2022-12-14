@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContratoImobiliariaCliente } from '../models/ContratoImobiliariaClientes';
 import { ContratosImobiliariasClientesService } from '../services/contratos_imobiliarias_clientes/contratos-imobiliarias-clientes.service';
 
 @Component({
@@ -7,24 +8,36 @@ import { ContratosImobiliariasClientesService } from '../services/contratos_imob
   styleUrls: ['./cad-contrato-imobiliaria-cliente.page.scss'],
 })
 export class CadContratoImobiliariaClientePage implements OnInit {
-
-  constructor(
-    private contratoClienteService: ContratosImobiliariasClientesService
-  ) {
-    this.getContratos()
+  contrato: ContratoImobiliariaCliente
+  constructor(private contratosService: ContratosImobiliariasClientesService) { 
+    this.contrato = new ContratoImobiliariaCliente()
   }
 
-  getContratos(){
-    this.contratoClienteService.buscarContratosCliente().subscribe(
-      (data) => {
+  ngOnInit(): void {
+    this.exibirContratos()
+  }
+
+  exibirContratos(): void {
+    this.contratosService.buscarContratosCliente().subscribe({
+      next: (data) => {
         console.log(data)
       },
-      (error) => {
+      error: (error) => {
         console.error(error)
       }
-    )
-  }
-  ngOnInit() {
+    })
   }
 
+  cadastrarContrato(): void {
+    this.contrato.id_contrato_imobiliaria = 2
+    this.contrato.id_cliente = 12
+    this.contratosService.postContratosProprietario(this.contrato).subscribe({
+      next: (data) => {
+        console.log(data)
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
+  }
 }
